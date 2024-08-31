@@ -18,7 +18,6 @@ describe('Login', () => {
 
   it.only('No password field filled', () => {   
     const user = Cypress.env('user_name')
-    cy.get('[data-cy="filesOrDirectory"]').load('fixture/Isaac.txt')
     cy.get('[data-cy="login-username-input"]').type(user)    
     cy.get('[data-cy="login-submit-button"]').click()
     cy.get('[data-cy="message-error"]')
